@@ -38,13 +38,33 @@ Docker的主要目标是“build, ship and run any app, anywhere", 即通过对�
 ###Image
 * Similar as VM Image.
 * read-only.
+* methods to create Image: 基于已有的Image的container， 基于本地模板（OpenVZ），基于Dockerfile
+* Useful commands:
+
+```
+docker pull xxx
+docker images
+docker rmi xxx
+```
 
 ###Container
 * 类似于一个轻量级的sandbox。是从Image创建的instance。
 * 可以把Container看做一个简易版的Linux系统环境；
+* Useful commands:
+
+```
+docker run image == docker create + docker start
+docker run -ti xxx /bin/bash
+docker stop
+docker kill
+docker attach/ docker exec  进入container
+docker exec -ti xxx /bin/bash
+```
 
 ###Repository
 目前，最大的是Docker hub， 国内公开的有 Docker pool
+
+
 
 
 
