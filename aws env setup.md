@@ -6,13 +6,13 @@ export PATH=~/Library/Python/3.6/bin:$PATH
 
 sudo ssh -i ~/Downloads/awskeypair/wckey.pem ec2-user@ec2-13-58-209-93.us-east-2.compute.amazonaws.com
 
-# wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.rpm
+``` wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.rpm
 
-# rpm -ivh jdk-8u151-linux-x64.rpm
+ rpm -ivh jdk-8u151-linux-x64.rpm```
 
-3.配置JAVA_HOME,CLASSPATH,PATH环境变量
+##配置JAVA_HOME,CLASSPATH,PATH环境变量
 
-#vi /etc/profile
+```vi /etc/profile
 
 export JAVA_HOME=/usr/java/jdk1.8.0_151
 
@@ -20,15 +20,15 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 export CLASSPATH=.:$JAVA_HOME/lib
 
-#source /etc/profile
+#source /etc/profile```
 
-4. setup Tomcat
-#wget http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.zip
+## setup Tomcat
+```wget http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.zip
 
 ~/apache-tomcat-8.5.23/bin/startup.sh
 
 
-http://ec2-13-58-209-93.us-east-2.compute.amazonaws.com:8080/TestDemo
+http://ec2-13-58-209-93.us-east-2.compute.amazonaws.com:8080/manager
 
 
 ## Steps of changing the Tomcat Port
@@ -63,7 +63,7 @@ For example
 Above statement instruct Tomcat server runs on port 8181.
 
 4) Edit and save the server.xml file. Restart Tomcat. Done
-
+```
 
 
 如何在Amazon EC2 Linux(Redhat)实例上搭建JDK,Tomcat环境
@@ -74,7 +74,7 @@ Linux version 3.10.42-52.145.amzn1.x86_64
 
 卸载OpenJDK
 
-#java -version
+```java -version
 
 java version "1.6.0_24"
 
@@ -100,7 +100,7 @@ tzdata-java-2012c-1.el6.noarch
 
 #java -version
 
-bash: /usr/bin/java: 没有那个文件或目录
+bash: /usr/bin/java: 没有那个文件或目录```
 
 二。软件、文件准备：
 
@@ -124,7 +124,7 @@ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2F
 
 2.安装JDK7
 
-#rpm -ivh jdk-8u151-linux-x64.rpm
+rpm -ivh jdk-8u151-linux-x64.rpm
 
 说明：JDK默认会安装到/usr/java/目录下
 
